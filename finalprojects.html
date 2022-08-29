@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EP1000 Final Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="header">
+            <h1><a href="index.html">DIGITAL FABRICATION</a></h1>
+            </div>
+
+            <div class="topnav">
+                <h2><a href="about.html">About Me</a></h2>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                    <h2>My Weekly Projects</h2>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="projects.html">Learning CAD</a>
+                    <a href="projects2.html">Creating 3D Models</a>
+                    <a href="projects3.html">Music Box</a>
+                    <a href="projects4.html">Embedded Systems</a>
+                    </div>
+                </div>
+                <h2><a href="finalprojects.html">Final Project</a></h2>
+            </div>
+
+            <div id="content">
+                <div id="content-set">
+                <h1>Final Project</h1>
+                </div>
+
+                <div id="content-title">
+                <h2>At a Glance</h2>
+                </div>
+                <style>
+                img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                </style>
+                <img src="Final Project/images/presentation.jpg" width="1000px">
+                <br>
+                <video src="Final Project/process video.mp4" controls width="1000px"></video>
+                <h3>Published on 28 August 2022</h3>
+                
+                <div id="content-title">
+                <h2>Brainstorming and Sketching</h2>
+                </div>
+                <img src="Final Project/images/brainstorming.jpg" width="1000px">
+                <p>
+                The first step to doing this project was to brainstorm of course. Personally, I wanted to make something that was actually practical but still something that was not too difficult; as I still felt that I was a beginner when it came to fabricating things of my own. I came up with 2 ideas, a phone stand which would light up when a phone was placed on it and a cat feeder that would automatically dispense food. After some consultation and consideration, I decided to make a cat feeder.
+                </p>
+                <p>
+                I looked up online for some references and I managed to find an example done on Arduino's Project Hub. I looked through how it was done and personally, I found it quite challenging. It made use of a light sensor, buzzer and even the messaging app Telegram to set the amount of food to be dispensed. I made it simpler for myself by having the input as an ultrasonic sensor and the output as a servo motor. Initially, I wanted to use a touch sensor but I realised that a cat would not know where to touch, thus causing no food to be dispensed. It made more sense to me to use an ultrasonic sensor instead so that as a cat nears the feeder, food would come out automatically.
+                </p>
+
+                <div id="content-title">
+                <h2>Prototyping</h2>
+                </div>
+                <img src="Final Project/images/prototyping.jpg" width="1000px">
+                <p>
+                I then proceeded to make a cardboard prototype and made it to my desired measurements. I planned to make the entire feeder out of plywood and a clear window at the front out of acrylic so that I would be able to see how much food is left in it. Meanwhile, the opening controlled by the servo motor would be 3D printed.
+                </p>
+                <p>
+                At first, I was a little lost in Tinkercad. I did not really know where to begin! Luckily, I did some reading and managed to get some assistance. I learnt about pulse width modulation (PWM) and how servo motors are controlled by it. It determines the position and direction of the rotation. In my case, I would be using the positional servo. I noted how the motor had to be connected to the digital PWM pins as indicated by the squiggly lines on the Uno board. I got the wiring and coding done accordingly such that when the ultrasonic sensor senses something in front less than 50 cm from it, the positional servo would turn anti-clockwise 90 degrees and vice versa.
+                </p>
+                <p>
+                With the things I needed in mind, I then listed out the bill of materials. For some reason, I was surprised that most small electronic parts are cheaper than expected. I always assumed that when it comes to electronics, they for sure would be expensive. I guess this just shows how inexperienced I am when it comes to dealing with electronics!
+                </p>
+
+                <div id="content-title">
+                <h2>Preparing to Laser Cut</h2>
+                </div>
+                <iframe src="https://ichat3348.autodesk360.com/shares/public/SH35dfcQT936092f0e438f0c7d5f1cd21527?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+                <p>
+                Next, I brought over my prototype digitally into Fusion 360 so that I could get the proper sketch measurements for laser cutting. The main body was more or less the same but I had to make some changes (continue reading to "Problems Faced" section for more details). The next few steps were straightforward, which were to laser cut each part out and assemble all of them together.
+                </p>
+
+                <div id="content-title">
+                <h2>Final Product</h2>
+                </div>
+                <img src="Final Project/images/final-product.jpg" width="1000px">
+                <br>
+                <img src="Final Project/images/coding.jpg" width="1000px">
+
+                <div id="content-title">
+                <h2>Problems Faced</h2>
+                </div>
+                <img src="Final Project/images/problems-faced.jpg" width="1000px">
+                <p>
+                As mentioned earlier, I started off feeling lost in Tinkercad. As we were encouraged to use text coding, I genuinely found it quite tough as I did not have much prior experience. During lessons, I understood the basic coding procedures but I did not really know how to apply them myself. I found a way around this, which was to use the block coding option available in Tinkercad. It took some time, but generally, it made it so much easier for me to input whatever that was needed. I find Tinkercad to be very user-friendly as I was able to download the code and put it into Arduino, which was then converted into text code. I was also really glad to see that there were also explanations located on a few lines to indicate what the purposes were. They really helped me with my understanding and from there I managed to learn how I could tweak them to make any necessary changes.
+                </p>
+                <p>
+                Another issue I faced was how I should house my breadboard and wires. After doing the physical wiring on the breadboard, I realised how my initial idea for the ultrasonic sensor to be at the top (as seen in the picture above) had to be scrapped. I also had planned for the breadboard to be inside the main feeder itself but I noted how it would not work because it would take up too much space. I did not want to redo the entire thing as it would cause a waste of time and materials, hence I made a compromise by housing the breadboard outside instead. This way, the ultrasonic sensor would still be facing the front and keeping the main feeder that I had already laser cut earlier. The only downside to this was how it made the entire thing bulkier than before.
+                </p>
+                <p>
+                The next issue was the 3D-printed opening to the cat feeder which would open and close. I never realised how thick 3 mm was until I tried to attach the servo motor to it. The motor of course still would not be able to go through even with a bigger hole due to its thickness. I then proceeded to make a new opening which was 1 mm instead and also made it to have a much larger hole so that the motor could fit well onto it.
+                </p>
+    
+                <div id="content-title">
+                <h2>Things to Improve</h2>
+                </div>
+                <p>
+                The first thing is I would not use a USB cable and work with a battery and switch instead. By doing so, the feeder can be turned on and off and batteries can be changed easily. It would be much more convenient than having to plug into an external source.
+                </p>
+                <p>
+                It would also be good to continue working on the overall design of the feeder. Because it is quite bulky for a small product, I think there could be better ways to make it less so. Some parts are quite fiddly as well so I think there is room for improvement there too.
+                </p>
+                <p>
+                Overall, I am still satisfied with my work nonetheless as I tried my best to fulfil the requirements. If I were to continuously improve on this product, I could even make more of the same thing and put them to use in my daily life.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
